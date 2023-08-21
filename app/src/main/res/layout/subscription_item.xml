@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dim_7dp"
+    android:elevation="@dimen/dim_20dp"
+    app:cardCornerRadius="@dimen/dim_20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="@dimen/dim_150dp">
+
+        <TextView
+            android:id="@+id/tv_subscriptionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_21dp"
+            android:layout_marginTop="@dimen/dim_14dp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:gravity="start|center"
+            android:text="Bronze"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_subscriptionPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:layout_marginEnd="@dimen/dim_15dp"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:gravity="center"
+            android:text="1200"
+            android:textAlignment="center"
+            android:textColor="@color/red_orange"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    android:layout_marginEnd="@dimen/dim_3dp"
+                    android:layout_toStartOf="@id/tv_subscriptionPrice"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="@string/le"
+                    android:textColor="@color/filter_silver"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_subscriptionPrice"
+                    app:layout_constraintEnd_toStartOf="@id/tv_subscriptionPrice"
+                    app:layout_constraintTop_toTopOf="@id/tv_subscriptionPrice" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_subscription_features"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_subscriptionName"
+            android:layout_marginHorizontal="@dimen/dim_20dp"
+            android:nestedScrollingEnabled="false"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/buttonSubscribe"
+            app:layout_constraintTop_toBottomOf="@id/tv_subscriptionName"
+            app:layout_constraintVertical_bias="0"
+            tools:itemCount="1"
+            tools:listitem="@layout/subscription_feature_item" />
+
+   <!--     <TextView
+            android:id="@+id/tv_subscription_feature"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/dim_20dp"
+            android:drawablePadding="3.5dp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:gravity="start|top"
+            android:text="20 Liters"
+            android:textAlignment="viewStart"
+            android:textColor="@color/filter_silver"
+            android:textSize="@dimen/dim_14sp"
+            app:drawableStartCompat="@drawable/right_ic"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/buttonSubscribe"
+            app:layout_constraintTop_toBottomOf="@id/tv_subscriptionName" />
+-->
+        <Button
+            android:id="@+id/buttonSubscribe"
+            android:layout_width="@dimen/dim_104dp"
+            android:layout_height="@dimen/dim_31dp"
+            android:background="@drawable/custom_subscribed_inactive_button"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dim_8dp"
+            android:text="@string/subscribe"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:drawableTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

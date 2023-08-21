@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.RedeemCodeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/error_layout"
+        layout="@layout/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/place_holder_redeem_code" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_redeem_pic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_200dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius_bottom_left="@dimen/dim_30dp"
+                app:riv_corner_radius_bottom_right="@dimen/dim_30dp" />
+
+            <TextView
+                android:id="@+id/tv_service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:textColor="@color/tundora"
+                android:textSize="@dimen/dim_18sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:background="@drawable/custom_redeem_code_background">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_181dp"
+                    android:background="@drawable/redeem_code_background">
+
+                    <TextView
+                        android:id="@+id/tv_redeem_code_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dim_45dp"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="@string/redeem_code_title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dim_16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_redeem_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_redeem_code_title"
+                        android:layout_marginStart="@dimen/dim_40dp"
+                        android:layout_marginTop="28dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:gravity="start|center"
+                        android:text="@string/redeem_code"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dim_14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_redeem_code"
+                        android:layout_marginStart="@dimen/dim_40dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:textAlignment="viewStart"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dim_24sp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_copy_ic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_redeem_code"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end|center"
+                        android:layout_marginTop="@dimen/dim_8dp"
+                        android:layout_marginEnd="@dimen/dim_40dp"
+                        android:background="@color/transparent"
+                        android:padding="@dimen/dim_5dp"
+                        android:src="@drawable/ic_copy" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_use_code_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_25dp"
+                android:layout_marginTop="@dimen/dim_24dp"
+                android:gravity="start|center"
+                android:textAlignment="viewStart"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="@string/how_to_use_code"
+                android:textColor="@color/mine_shaft"
+                android:textSize="@dimen/dim_16sp" />
+
+            <TextView
+                android:id="@+id/tv_using_code_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_25dp"
+                android:layout_marginTop="@dimen/dim_4dp"
+                android:gravity="start|center"
+                android:textAlignment="viewStart"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:textColor="@color/mine_shaft"
+                android:textSize="@dimen/dim_16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

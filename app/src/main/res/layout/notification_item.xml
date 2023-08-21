@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dim_5dp"
+    android:layout_marginVertical="@dimen/dim_10dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="@dimen/dim_15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dim_8dp"
+        android:paddingStart="@dimen/dim_8dp"
+        android:paddingEnd="@dimen/dim_15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_50dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_logo_splash" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dim_15dp"
+            android:layout_toEndOf="@id/iv_pic"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:gravity="center|start"
+            android:text="Total opens new branch in Giza!"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dim_16sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_unread_sign"
+            android:layout_width="@dimen/dim_10dp"
+            android:layout_height="@dimen/dim_10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dim_15dp"
+            android:src="@color/red_orange" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

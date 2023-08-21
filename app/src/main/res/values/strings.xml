@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Banzenty</string>
+
+    <string name="facebook_app_id" translatable="false">2057168304482293</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb2057168304482293</string>
+    <string name="facebook_client_token" translatable="false">7b812f13e62d7e386565cec307cf806b</string>
+
+    <!-- Intro Texts -->
+    <string name="services_title">Get Services</string>
+    <string name="services_description">Enjoy Our services in different Fuel Stations around the country</string>
+
+    <string name="market_title">Mini Market</string>
+    <string name="market_description">Don\'t forget enjoying Mini Market Offers</string>
+
+    <string name="cashback_title">Cashback</string>
+    <string name="cashback_description">Full your tank and get cashback</string>
+
+    <!-- Auth Texts -->
+    <string name="hello">Hello!</string>
+    <!--    <string name="hello">Hello Again!</string>-->
+    <!--    <string name="login_welcome_msg">Welcome back you\'ve been missed</string>-->
+    <string name="login_welcome_msg">Welcome back you\'ve been missed</string>
+    <string name="phone_number">Phone number</string>
+    <string name="car_plate">Car Plate</string>
+    <string name="invalid_car_plates">Invalid car plates</string>
+    <string name="numbers">Numbers</string>
+    <string name="alphabets">Alphabets</string>
+    <string name="directions">Directions</string>
+    <string name="available_services">Available Services</string>
+    <string name="password">Password</string>
+    <string name="invalid_password">Invalid password</string>
+    <string name="invalid_phone">invalid phone number</string>
+    <string name="recovery_password">Recovery Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="guest_login">Continue as a guest</string>
+    <string name="continue_with">Or continue with</string>
+    <string name="not_member">Not a member? <font color="#FF4438">Register now</font></string>
+    <string name="sign_up">Sign up!</string>
+    <string name="registration_msg">Fill in your account details</string>
+    <string name="full_name">Full name</string>
+    <string name="invalid_name">Invalid Name</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="agree_to_terms">I agree to <font color="#FF4438">Terms and Conditions</font></string>
+    <string name="register">Register</string>
+    <string name="verify_phone_num">Verify your Phone number</string>
+    <string name="verification_msg">We have sent the code verification to\nyour mobile number</string>
+    <string name="check_sending_otp">Don\'t you receive any code?</string>
+    <string name="resending_otp">Resend new code</string>
+    <string name="verify">Verify</string>
+    <string name="verification_complete">Verification Complete!</string>
+    <string name="verification_success_message">Your verification has been\nsuccessfully completed</string>
+    <string name="done">Done</string>
+
+    <!-- Main activity texts -->
+    <string name="home">Home</string>
+    <string name="station_finder">Station Finder</string>
+    <string name="offers">Offers</string>
+    <string name="hi_user">Hi  %1$s</string>
+    <string name="remaining_cash">%.2f EGP Remaining</string>
+    <string name="wallet_amount">%.2f EGP</string>
+    <string name="no_transaction_data">No Transaction Data</string>
+    <string name="requests">Requests</string>
+    <string name="profile">Profile</string>
+    <string name="services">Services</string>
+    <string name="subscriptions">Subscriptions</string>
+    <string name="latest_request">Latest Request</string>
+    <string name="request_id">Request ID</string>
+    <string name="station">Station</string>
+    <string name="date_and_time">Date &#38; Time</string>
+    <string name="total">Total</string>
+    <string name="distance">Distance</string>
+    <string name="opening">Opening</string>
+    <string name="get_direction">Get Direction</string>
+    <string name="filter">Filter</string>
+    <string name="my_requests">My Requests</string>
+    <string name="settings">Settings</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="logout">Logout</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="profile_updated">Profile Updated!</string>
+    <string name="profile_update_msg">Your profile has been\nsuccessfully updated.</string>
+    <string name="name">Name</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="le">LE</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="upload_image">Upload Photo</string>
+    <string name="add_car">Add Car</string>
+    <string name="amount">Amount</string>
+    <string name="get_back">Get Back Soon!</string>
+    <string name="logout_msg">Are you sure you want to\nlogout?</string>
+    <string name="cancel">Cancel</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_Language">Change Language</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="password_changed">Password Changed</string>
+    <string name="password_changed_msg">Your password has been\nSuccessfully changed</string>
+
+    <!-- main menu -->
+    <string name="open_nav">Open navigation drawer</string>
+    <string name="close_nav">Close navigation drawer</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+    <string name="forget_password">Forget Password؟</string>
+    <string name="forget_password_msg">Please enter your registered phone number for the verification code</string>
+    <string name="confirm">Confirm</string>
+    <string name="password_reset">Password Reset</string>
+    <string name="password_reset_msg">Your password has been\nSuccessfully reset</string>
+    <string name="notifications">Notifications</string>
+    <string name="loyality_program">Loyalty Program</string>
+    <string name="no_of_points">You Have Now %1$d Points</string>
+    <string name="redeem_your_points">Redeem Your Points</string>
+    <string name="car_wash">Car Wash</string>
+    <string name="redeem">Redeem</string>
+    <string name="enter_correct_car_number">Please enter the correct car numbers</string>
+
+
+    <string name="text_retry">Retry</string>
+    <string name="text_success">Success</string>
+    <string name="text_ok">OK</string>
+    <string name="text_error">Error</string>
+    <string name="text_info">Info</string>
+    <string name="are_you_sure">Are you sure</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="invalid_code">Invalid code</string>
+    <string name="no_data">No Data…</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="code_sent">The code has been sent</string>
+    <string name="message_received">Message Received!</string>
+    <string name="your_message_very_imp">Your message is very important to us, we will contact u as soon as possible.</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="invalid_message">Invalid Message</string>
+    <string name="egp">%1$s EGP</string>
+    <string name="terms_conditions">Terms and Conditions</string>
+    <string name="your_location">You</string>
+    <string name="distance_km">%1$.0fKM</string>
+    <string name="redeem_code_title">One more step to get your redemption offer</string>
+    <string name="redeem_code">Redeem Code</string>
+    <string name="how_to_use_code">How to use the code?</string>
+    <string name="copied_to_clipboard">Copied to Clipboard!</string>
+    <string name="delete_car">delete</string>
+    <string name="guest">Guest</string>
+    <string name="need_access">Ready to explore?</string>
+    <string name="you_need_to_login">Please login/signup first</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="crop_image_text">Crop Image</string>
+    <string name="you_want_to_delete_car">Are you sure you want to delete xxx car?</string>
+    <string name="car_added">Car Added Successfully</string>
+    <string name="deleted_successfully">Deleted Successfully</string>
+    <string name="renew_subscription">Renew\nSubscription</string>
+    <string name="cancel_subscription">Cancel\nSubscription</string>
+    <string name="subscription">Subscription</string>
+    <string name="wallet">Wallet</string>
+    <string name="fuel_types">Fuel Types</string>
+    <string name="about_subscription">About Subscription</string>
+    <string name="fuel_type_s">Fuel Type: %s</string>
+    <string name="fuel_s">Fuel %s</string>
+    <string name="estimated_capacity_s_litres">Estimated Capacity: %s Litres</string>
+    <string name="total_price_s_egp">Total Price: %s EGP</string>
+    <string name="benefits">Benefits</string>
+    <string name="transactions">Transactions</string>
+    <string name="subscribed">Subscribed</string>
+    <string name="payment_type">Payment Type</string>
+    <string name="reward">Reward</string>
+    <string name="cash">Cash</string>
+    <string name="subscription_members">Subscription Members</string>
+    <string name="note_that_banzenty_deals">*Note That Banzenty deals with specific Fuel Stations <u><font color='#FF4438'>Find out them</font></u></string>
+    <string name="fuel_stations">Fuel Stations</string>
+    <string name="enter_correct_car_num">Enter correct car numbers</string>
+    <string name="enter_correct_car_alphabet">Enter correct car alphabets</string>
+    <string name="enter_arabic_alphabet">Enter arabic alphabets only</string>
+    <string name="f_litres">%.2f Litres</string>
+    <string name="no_subscription_found">No subscription found!</string>
+    <string name="subscribe_now">Subscribe Now</string>
+    <string name="renewed_successfully">Renewed Successfully</string>
+    <string name="cancelled_successfully">Cancelled Successfully</string>
+
+    <string name="locus_rationale_title">Location Permission Required!</string>
+    <string name="locus_rationale_message">You have to allow access to location in order to see all the nearby stations</string>
+    <string name="locus_permission_blocked_title">Location Permission Blocked!</string>
+    <string name="locus_permission_blocked_message">You will not able to see nearby stations</string>
+    <string name="locus_location_resolution_title">Allow GPS Access</string>
+    <string name="locus_location_resolution_message">You have to allow access to GPS in order to see all the nearby stations</string>
+    <string name="grant">Grant</string>
+    <string name="deny">Deny</string>
+    <string name="depends_on_fuel_price">Depends on fuel price at charging</string>
+    <string name="discount">discount: %d</string>
+    <string name="d_meters">%s M</string>
+    <string name="subscription_credit">Subscription Credit</string>
+    <string name="subscription_confrimation_message">Are you sure you want to request to subscribe to this subscription?</string>
+    <string name="reviewing">Reviewing…</string>
+    <string name="stations">Stations</string>
+    <string name="_100_km">100 KM</string>
+    <string name="_1_km">1 KM</string>
+    <string name="apply">Apply</string>
+    <string name="login">Login!</string>
+    <string name="please_sign_in_to_cont">Please Sign in to continue!</string>
+    <string name="password_not_matched">Passwords \'re not matched</string>
+    <string name="input_order_amount">Input Order Amount</string>
+    <string name="total_amount">Total: </string>
+    <string name="ok">OK</string>
+</resources>

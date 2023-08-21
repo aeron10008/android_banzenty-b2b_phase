@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".ui.main.ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dim_90dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <include
+                android:id="@+id/error_layout"
+                layout="@layout/error_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:visibility="gone" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:visibility="gone">
+
+                <include layout="@layout/place_holder_profile" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <ImageView
+                android:id="@+id/iv_profile_pic"
+                android:layout_width="@dimen/dim_120dp"
+                android:layout_height="@dimen/dim_120dp"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_60dp" />
+
+            <ImageButton
+                android:id="@+id/iv_change_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-35dp"
+                android:layout_marginEnd="-30dp"
+                android:background="@color/transparent"
+                android:padding="5dp"
+                android:src="@drawable/camera_ic" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim_18sp" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutNameView"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_30dp"
+                android:background="@drawable/custom_iron_r14_rectangle"
+                android:paddingStart="@dimen/dim_16dp"
+                android:paddingEnd="@dimen/dim_2dp">
+
+                <ImageView
+                    android:id="@+id/imageViewProfileNameIc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/edit_profile_ic" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/dim_10dp"
+                    android:layout_toStartOf="@id/iv_edit_name"
+                    android:layout_toEndOf="@id/imageViewProfileNameIc"
+                    android:background="@color/transparent"
+                    android:enabled="false"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="start|center"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingVertical="@dimen/dim_8dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/comet"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_edit_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dim_10dp"
+                    android:src="@drawable/edit_pen_ic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutEditingPhoneNum"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_20dp"
+                android:background="@drawable/custom_iron_r14_rectangle"
+                android:paddingStart="@dimen/dim_14dp"
+                android:paddingEnd="@dimen/dim_2dp">
+
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    app:ccp_arrowSize="25sp"
+                    app:ccp_defaultCode="02"
+                    app:ccp_defaultNameCode="EG"
+                    app:ccp_dialogTextColor="@color/comet"
+                    app:ccp_hideNameCode="true"
+                    app:ccp_keyboardAutoPopOnSearch="true"
+                    app:ccp_textColor="@color/comet"
+                    app:ccp_textSize="@dimen/dim_16sp" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="@dimen/dim_20dp"
+                    android:layout_toStartOf="@id/iv_edit_phone"
+                    android:layout_toEndOf="@id/ccp"
+                    android:background="@color/transparent"
+                    android:enabled="false"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="start|center"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:paddingTop="@dimen/dim_8dp"
+                    android:paddingBottom="@dimen/dim_8dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/comet"
+                    android:textSize="@dimen/dim_14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_edit_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dim_10dp"
+                    android:src="@drawable/edit_pen_ic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutEditingEmail"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_20dp"
+                android:background="@drawable/custom_iron_r14_rectangle"
+                android:paddingStart="@dimen/dim_16dp"
+                android:paddingEnd="@dimen/dim_2dp">
+
+                <ImageView
+                    android:id="@+id/imageViewEmailIc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/envelope_ic" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toStartOf="@id/iv_edit_email"
+                    android:layout_toEndOf="@id/imageViewEmailIc"
+                    android:background="@color/transparent"
+                    android:enabled="false"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="start|center"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:paddingVertical="@dimen/dim_8dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/comet"
+                    android:textSize="@dimen/dim_14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_edit_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dim_10dp"
+                    android:src="@drawable/edit_pen_ic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutEditingCarPlate"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_20dp"
+                android:background="@drawable/custom_iron_r14_rectangle"
+                android:paddingStart="@dimen/dim_14dp"
+                android:paddingEnd="@dimen/dim_2dp">
+
+                <ImageView
+                    android:id="@+id/iv_car_plate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_car_plate" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutCarPlate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toStartOf="@id/iv_edit_car_plate"
+                    android:layout_toEndOf="@id/iv_car_plate"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/editTextCarNumbers"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_iron_r10_rectangle"
+                        android:enabled="false"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:gravity="start|center"
+                        android:hint="@string/numbers"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:paddingHorizontal="12dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/tundora"
+                        android:textColorHint="@color/dark_silver"
+                        android:textSize="@dimen/dim_14sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dim_5dp"
+                            android:layoutDirection="ltr"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <EditText
+                                android:id="@+id/et_alp_3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/dim_5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_iron_r8_rectangle"
+                                android:digits="غظضذخثتشرقصجفعسنملةىكيطئءؤحزوهدبا"
+                                android:minHeight="@dimen/dim_30dp"
+                                android:enabled="false"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:hint="ت"
+                                android:maxLength="1"
+                                android:minWidth="@dimen/dim_24dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/tundora"
+                                android:textColorHint="@color/shimmer_grey"
+                                android:textSize="@dimen/dim_14sp" />
+
+                            <EditText
+                                android:id="@+id/et_alp_2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/dim_5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_iron_r8_rectangle"
+                                android:digits="غظضذخثتشرقصجفعسنملةىكيطئءؤحزوهدبا"
+                                android:enabled="false"
+                                android:minHeight="@dimen/dim_30dp"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:hint="ب"
+                                android:maxLength="1"
+                                android:minWidth="@dimen/dim_24dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/tundora"
+                                android:textColorHint="@color/shimmer_grey"
+                                android:textSize="@dimen/dim_14sp" />
+
+                            <EditText
+                                android:id="@+id/et_alp_1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_iron_r8_rectangle"
+                                android:digits="غظضذخثتشرقصجفعسنملةىكيطئءؤحزوهدبا"
+                                android:enabled="false"
+                                android:minHeight="@dimen/dim_30dp"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:hint="ا"
+                                android:maxLength="1"
+                                android:minWidth="@dimen/dim_24dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/tundora"
+                                android:textColorHint="@color/shimmer_grey"
+                                android:textSize="@dimen/dim_14sp" />
+                        </LinearLayout>
+
+                        <!-- <com.mukesh.OtpView
+                             android:id="@+id/otpCarAlphabets"
+                             style="@style/OtpWidget.OtpView"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:fontFamily="@font/sf_pro_display_regular"
+                             android:hint="ابت"
+                             android:inputType="textCapCharacters"
+                             android:itemBackground="@drawable/custom_iron_r8_rectangle"
+                             android:textColor="@color/tundora"
+                             android:textSize="@dimen/dim_14sp"
+                             app:OtpItemCount="3"
+                             app:OtpRtlTextDirection="true"
+                             app:OtpItemHeight="32dp"
+                             app:OtpItemSpacing="7dp"
+                             app:OtpItemWidth="22dp"
+                             app:OtpViewType="none"
+                             />-->
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_edit_car_plate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dim_10dp"
+                    android:src="@drawable/edit_pen_ic" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonSaveChanges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_30dp"
+                android:background="@drawable/custom_button_red_orange_r10"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:gravity="center"
+                android:text="@string/save_changes"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dim_30dp"
+                android:indeterminateTint="@color/flamingo"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/wild_sand"
+    tools:context=".ui.main.WalletFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dim_20dp"
+            android:paddingTop="@dimen/dim_20dp"
+            android:paddingBottom="@dimen/dim_80dp">
+
+            <include
+                android:id="@+id/error_layout"
+                layout="@layout/error_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <include layout="@layout/place_holder_home" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sub_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_wallet_charge"
+                    android:layout_width="@dimen/dim_80dp"
+                    android:layout_height="@dimen/dim_80dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:src="@drawable/add_button" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dim_8dp"
+                    android:padding="@dimen/dim_15dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/rounded_white_20dp"
+                    android:outlineAmbientShadowColor="@color/red_orange"
+                    android:outlineSpotShadowColor="@color/red_orange"
+                    android:elevation="@dimen/dim_5dp"
+                    android:orientation="vertical"
+                    tools:targetApi="p">
+
+                    <TextView
+                        android:id="@+id/tv_wallet_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:gravity="start|center"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dim_18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_transactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_20dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:gravity="center"
+                android:text="@string/transactions"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim_24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include
+                    android:id="@+id/no_data_layout"
+                    layout="@layout/no_data_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/dim_20dp"
+                    android:layout_marginTop="@dimen/dim_5dp"
+                    android:paddingHorizontal="@dimen/dim_5dp"
+                    android:paddingVertical="@dimen/dim_5dp"
+                    android:visibility="gone" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_wallet_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dim_15dp"
+                    android:layout_marginTop="@dimen/dim_5dp"
+                    android:paddingHorizontal="@dimen/dim_10dp"
+                    android:paddingVertical="@dimen/dim_10dp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_white_20dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toTopOf="@id/buttonSubscribe"
+                    app:layout_constraintTop_toBottomOf="@id/tv_subscriptionName"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/wallet_transaction_item" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

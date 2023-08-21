@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.LoyaltyProgramActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/error_layout"
+        layout="@layout/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewRedeemPointsTitle" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/place_holder_loyalty_program" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/parent1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_228dp"
+        android:background="@drawable/rounded_bottom_orange_red_30dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_white_20dp"
+            android:padding="@dimen/dim_12dp">
+
+            <ImageView
+                android:id="@+id/imageViewQr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPoints"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_163dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="138dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/points_view_background"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewNoOfPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="@string/no_of_points"
+                android:textColor="@color/tundora"
+                android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewTrophy"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/textViewNoOfPoints"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/trophy_ic" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewRedeemPointsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_30dp"
+        android:layout_marginTop="@dimen/dim_24dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/redeem_your_points"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:gravity="start|center"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewPoints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_rewards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dim_16dp"
+        android:layout_marginTop="@dimen/dim_20dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewRedeemPointsTitle"
+        app:layout_constraintVertical_bias="0"
+        app:spanCount="2"
+        tools:listitem="@layout/redeeming_service_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

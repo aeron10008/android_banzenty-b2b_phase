@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/introGetServicesFragment">
+
+    <fragment
+        android:id="@+id/introGetServicesFragment"
+        android:name="com.restart.banzenty.ui.intro.IntroGetServicesFragment"
+        android:label="fragment_intro_get_services"
+        tools:layout="@layout/fragment_intro_get_services">
+        <action
+            android:id="@+id/action_introGetServicesFragment_to_introMarketFragment2"
+            app:destination="@id/introMarketFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/introMarketFragment"
+        android:name="com.restart.banzenty.ui.intro.IntroMarketFragment"
+        android:label="fragment_intro_market"
+        tools:layout="@layout/fragment_intro_market">
+        <action
+            android:id="@+id/action_introMarketFragment_to_introCashBackFragment"
+            app:destination="@id/introCashBackFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/introCashBackFragment"
+        android:name="com.restart.banzenty.ui.intro.IntroCashBackFragment"
+        android:label="fragment_intro_cash_back"
+        tools:layout="@layout/fragment_intro_cash_back" />
+</navigation>

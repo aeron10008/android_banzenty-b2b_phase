@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dim_30dp"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/image_factory"
+        android:layout_width="@dimen/dim_40dp"
+        android:layout_height="@dimen/dim_40dp"
+        android:background="@color/shimmer_grey"
+        android:scaleType="fitXY" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dim_8dp"
+        android:background="@color/shimmer_grey" />
+</LinearLayout>
+

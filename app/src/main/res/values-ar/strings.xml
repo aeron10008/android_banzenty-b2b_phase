@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Banzenty</string>
+
+
+    <!-- Intro Texts -->
+    <string name="services_title">احصل على خدماتننا</string>
+    <string name="services_description">استمتع بخدماتنا في محطات وقود مختلفة في جميع أنحاء البلاد</string>
+
+    <string name="market_title">ميني ماركت</string>
+    <string name="market_description">لا تنس الاستمتاع بعروض الميني ماركت</string>
+
+    <string name="cashback_title">استرداد نقدي</string>
+    <string name="cashback_description">املأ خزانك واحصل على استرداد نقدي</string>
+
+    <!-- Auth Texts -->
+    <string name="hello">أهلا وسهلا!</string>
+    <string name="login_welcome_msg">مرحبا بك مجدداً، لقد افتقدناك</string>
+    <string name="phone_number">رقم المحمول</string>
+    <string name="car_plate">لوحة السيارة</string>
+    <string name="invalid_car_plates">لوحة سيارات غير صحيحة</string>
+    <string name="numbers">الأرقام</string>
+    <string name="alphabets">الحروف</string>
+    <string name="directions">الإتجاهات</string>
+    <string name="available_services">الخدمات المتاحة</string>
+    <string name="password">كلمة المرور</string>
+    <string name="invalid_password">كلمة مرور غير صحيحة</string>
+    <string name="invalid_phone">رقم المحمول غير صحيح</string>
+    <string name="recovery_password">استرداد كلمة المرور</string>
+    <string name="sign_in">تسجيل دخول</string>
+    <string name="guest_login">استمر كضيف</string>
+    <string name="continue_with">أو المواصلة عن طريق</string>
+    <string name="not_member">لست عضواً؟ <font color="#FF4438">سجل الآن</font></string>
+    <string name="sign_up">إنشاء حساب جديد</string>
+    <string name="registration_msg">املأ تفاصيل حسابك!</string>
+    <string name="full_name">الاسم كامل</string>
+    <string name="invalid_name">اسم غير صحيح</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="agree_to_terms">أنا أوافق على <font color="#FF4438">الشروط والأحكام</font></string>
+    <string name="register">تسجيل</string>
+    <string name="verify_phone_num">تحقق من رقم هاتفك</string>
+    <string name="verification_msg">لقد أرسلنا رمز التحقق لرقم هاتفك المحمول</string>
+    <string name="check_sending_otp">لم تتلق أي رمز؟</string>
+    <string name="resending_otp">أرسال رمز تحقق جديد</string>
+    <string name="verify">تحقق</string>
+    <string name="verification_complete">اكتمل التحقق!</string>
+    <string name="verification_success_message">لقد تم التحقق بنجاح</string>
+    <string name="done">تم</string>
+
+    <!-- Main activity texts -->
+    <string name="home">الرئيسية</string>
+    <string name="station_finder">العثور على محطة وقود</string>
+    <string name="offers">العروض</string>
+    <string name="hi_user">أهلاً  %1$s</string>
+    <string name="remaining_cash">%.2f ج.م متبقي</string>
+    <string name="wallet_amount">%.2f ج.م</string>
+    <string name="no_transaction_data">لا توجد بيانات المعاملات</string>
+    <string name="requests">العمليات</string>
+    <string name="profile">الصفحة الشخصية</string>
+    <string name="services">الخدمات</string>
+    <string name="subscriptions">الباقات</string>
+    <string name="latest_request">آخر عملية</string>
+    <string name="request_id">رقم العملية</string>
+    <string name="station">محطة</string>
+    <string name="date_and_time">التاريخ و الوقت</string>
+    <string name="total">الإجمالي</string>
+    <string name="distance">المسافة</string>
+    <string name="opening">تعمل</string>
+    <string name="get_direction">الإتجاهات</string>
+    <string name="filter">فلتر</string>
+    <string name="my_requests">عملياتي</string>
+    <string name="settings">الإعدادات</string>
+    <string name="contact_us">تواصل معنا</string>
+    <string name="logout">الخروج</string>
+    <string name="save_changes">حفظ التغييرات</string>
+    <string name="profile_updated">تم تحديث الصفحة الشخصية!</string>
+    <string name="profile_update_msg">تم تحديث الصفحة الشخصية بنجاح!</string>
+    <string name="name">الاسم</string>
+    <string name="message">رسالة</string>
+    <string name="send">إرسال</string>
+    <string name="le">ج.م</string>
+    <string name="subscribe">اشترك</string>
+    <string name="upload_image">تحميل صورة</string>
+    <string name="add_car">اضف سيارة</string>
+    <string name="amount">الكمية</string>
+    <string name="get_back">عد قريباً!</string>
+    <string name="logout_msg">هل فعلا تريد تسجيل الخروج؟</string>
+    <string name="cancel">إلغاء</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="change_Language">تغيير اللغة</string>
+    <string name="current_password">كلمة المرور الحالية</string>
+    <string name="new_password">كلمة المرور الجديدة</string>
+    <string name="password_changed">تم تغيير كلمة المرور</string>
+    <string name="password_changed_msg">تم تغيير كلمة المرور بنجاح</string>
+
+    <!-- main menu -->
+    <string name="open_nav">Open navigation drawer</string>
+    <string name="close_nav">Close navigation drawer</string>
+    <string name="english">English</string>
+    <string name="arabic" translatable="false">العربية</string>
+    <string name="forget_password">نسيت كلمة السر؟</string>
+    <string name="forget_password_msg">يرجى إدخال رقم هاتفك المسجل للحصول علي رمز التحقق</string>
+    <string name="confirm">تأكيد</string>
+    <string name="password_reset">إعادة تعيين كلمة المرور</string>
+    <string name="password_reset_msg">تمت إعادة تعيين كلمة المرور الخاصة بك بنجاح</string>
+    <string name="notifications">إلاشعارات</string>
+    <string name="loyality_program">برنامج النقاط</string>
+    <string name="no_of_points">لديك الآن %1$d نقاط</string>
+    <string name="redeem_your_points">استبدال نقاطك</string>
+    <string name="car_wash">غسيل السيارة</string>
+    <string name="redeem">استبدال</string>
+    <string name="enter_correct_car_number">يرجى إدخال أرقام السيارة بشكل صحيح</string>
+
+
+    <string name="text_retry">إعادة محاولة</string>
+    <string name="text_success">نجحت المحاولة</string>
+    <string name="text_ok">تم</string>
+    <string name="text_error">خطأ</string>
+    <string name="text_info">معلومة</string>
+    <string name="are_you_sure">هل أنت متأكد</string>
+    <string name="text_yes">نعم</string>
+    <string name="text_cancel">إلغاء</string>
+    <string name="submit">إرسال</string>
+    <string name="invalid_code">رمز غير صالح</string>
+    <string name="no_data">لا توجد بيانات…</string>
+    <string name="no_internet">لا يوجد اتصال إنترنت</string>
+    <string name="something_went_wrong">حدث خطأ ما</string>
+    <string name="code_sent">تم إرسال الرمز</string>
+    <string name="message_received">تم استلام الرسالة!</string>
+    <string name="your_message_very_imp">رسالتك مهمة جدًا بالنسبة لنا، وسنتصل بك في أقرب وقت ممكن.</string>
+    <string name="invalid_email">بريد إلكتروني غير صالح</string>
+    <string name="invalid_message">رسالة غير صحيحة</string>
+    <string name="egp">%1$s ج م</string>
+    <string name="terms_conditions">الشروط والأحكام</string>
+    <string name="your_location">أنت</string>
+    <string name="distance_km">%1$.0f كم</string>
+    <string name="redeem_code_title">خطوة أخرى للحصول على عرض استبدال النقاط الخاص بك</string>
+    <string name="redeem_code">كود الاستبدال</string>
+    <string name="how_to_use_code">كيف تستخدم الكود ؟</string>
+    <string name="copied_to_clipboard">تم نسخها إلى الهاتف!</string>
+    <string name="delete_car">مسح</string>
+    <string name="guest">زائر</string>
+    <string name="need_access">هل أنت مستعد للاستكشاف ؟</string>
+    <string name="you_need_to_login">الرجاء تسجيل الدخول/الاشتراك أولاً</string>
+    <string name="camera">كاميرا</string>
+    <string name="gallery">معرض الصور</string>
+    <string name="crop_image_text">قص الصورة</string>
+    <string name="you_want_to_delete_car">هل أنت متأكد من أنك تريد حذف سيارة xxx ؟</string>
+    <string name="car_added">تمت إضافة السيارة بنجاح</string>
+    <string name="deleted_successfully">حذف بنجاح</string>
+    <string name="renew_subscription">تجديد الباقة</string>
+    <string name="cancel_subscription">إلغاء الباقة</string>
+    <string name="subscription">باقتك</string>
+    <string name="wallet">محفظة</string>
+    <string name="fuel_types">أنواع الوقود</string>
+    <string name="about_subscription">حول الباقة</string>
+    <string name="fuel_type_s">نوع الوقود: %s</string>
+    <string name="fuel_s">وقود %s</string>
+    <string name="estimated_capacity_s_litres">السعة التقديرية: %s لتر</string>
+    <string name="total_price_s_egp">السعر الإجمالي: %s ج.م</string>
+    <string name="benefits">المزايا</string>
+    <string name="transactions">المعاملات</string>
+    <string name="subscribed">مشترك</string>
+    <string name="payment_type">وسيلة الدفع</string>
+    <string name="reward">مكافأة</string>
+    <string name="cash">نقدي</string>
+    <string name="subscription_members">أعضاء الباقة</string>
+    <string name="note_that_banzenty_deals">*لاحظ أن Banzenty يتعامل مع محطات وقود محددة <u><font color='#FF4438'>اكتشفهم</font></u></string>
+    <string name="fuel_stations">محطات الوقود</string>
+    <string name="enter_correct_car_num">أدخل أرقام السيارات الصحيحة</string>
+    <string name="enter_correct_car_alphabet">أدخل أبجديات السيارة الصحيحة</string>
+    <string name="enter_arabic_alphabet">أدخل الأبجدية العربية فقط</string>
+    <string name="f_litres">%.2f لتر</string>
+    <string name="no_subscription_found">لا يوجد اشتراك في باقة!</string>
+    <string name="subscribe_now">اشترك الان</string>
+    <string name="renewed_successfully">تم التجديد بنجاح</string>
+    <string name="cancelled_successfully">ألغي بنجاح</string>
+
+    <string name="locus_rationale_title">اذن الموقع مطلوب!</string>
+    <string name="locus_rationale_message">عليك السماح بالوصول إلى الموقع لرؤية جميع المحطات المجاورة</string>
+    <string name="locus_permission_blocked_title">تم حظر إذن الموقع!</string>
+    <string name="locus_permission_blocked_message">لن تتمكن من رؤية المحطات القريبة</string>
+    <string name="locus_location_resolution_title">اسمح بالوصول إلى GPS</string>
+    <string name="locus_location_resolution_message">عليك السماح بالوصول إلى GPS لرؤية جميع المحطات القريبة</string>
+    <string name="grant">منح</string>
+    <string name="deny">رفض</string>
+    <string name="depends_on_fuel_price">يعتمد على سعر الوقود عند الدفع</string>
+    <string name="discount">خصم: %d</string>
+    <string name="d_meters">%s متر</string>
+    <string name="subscription_credit">من رصيد الباقة</string>
+    <string name="subscription_confrimation_message">هل أنت متأكد أنك تريد الاشتراك في هذه الباقة؟</string>
+    <string name="reviewing">قيد المراجعة…</string>
+    <string name="stations">محطات الوقود</string>
+    <string name="_100_km">100 كم</string>
+    <string name="_1_km">1 كم</string>
+    <string name="apply">تطبيق</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="please_sign_in_to_cont">من فضلك سجل دخولك للمتابعة</string>
+    <string name="password_not_matched">Passwords \'re not matched</string>
+    <string name="input_order_amount">مبلغ أمر الإدخال</string>
+    <string name="total_amount">الإجمالي: </string>
+    <string name="ok">نعم</string>
+</resources>

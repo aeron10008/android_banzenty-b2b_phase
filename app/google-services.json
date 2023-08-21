@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "98658807854",
+    "project_id": "banzenty-20fc2",
+    "storage_bucket": "banzenty-20fc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98658807854:android:c2af14ba813f3ef179afbf",
+        "android_client_info": {
+          "package_name": "com.restart.banzenty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98658807854-1pstkjo54lpj8i2n0nkv4jupf1gluv8m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.restart.banzenty",
+            "certificate_hash": "a30f670e2b95284b28259d8a823d3da6f6687bd0"
+          }
+        },
+        {
+          "client_id": "98658807854-1cncqoa9ph1muk1ad34iha4dda4t1spj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk0eTs2d9PXZEPx4LynBK9TMjkd0XW_K0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98658807854-1cncqoa9ph1muk1ad34iha4dda4t1spj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "98658807854-gf7ieo893qavcejh841qlm23j7qnq2qj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.banzenty.iOSBanzenty"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

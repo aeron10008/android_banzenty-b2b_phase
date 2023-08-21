@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_228dp"
+        android:background="@drawable/loyalty_shimmer_view_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/shimmer_cv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_163dp"
+        android:layout_marginHorizontal="@dimen/dim_24dp"
+        android:layout_marginTop="@dimen/dim_138dp"
+        android:background="@drawable/loyalty_shimmer_view_2"
+        android:elevation="@dimen/dim_2dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/shimmer_tv"
+        android:layout_width="@dimen/dim_120dp"
+        android:layout_height="@dimen/dim_8dp"
+        android:layout_marginStart="@dimen/dim_30dp"
+        android:layout_marginTop="@dimen/dim_24dp"
+        android:background="@color/shimmer_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_cv" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_tv">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dim_20dp"
+            android:layout_marginTop="@dimen/dim_20dp"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_170dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="@dimen/dim_10dp"
+                android:background="@drawable/rounded_shimmer_20dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_170dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="@dimen/dim_10dp"
+                android:background="@drawable/rounded_shimmer_20dp" />
+
+            <View
+                android:id="@+id/v3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_170dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="@dimen/dim_10dp"
+                android:background="@drawable/rounded_shimmer_20dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_170dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="@dimen/dim_10dp"
+                android:background="@drawable/rounded_shimmer_20dp" />
+
+            <View
+                android:id="@+id/v5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_170dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="@dimen/dim_10dp"
+                android:background="@drawable/rounded_shimmer_20dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_170dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="@dimen/dim_10dp"
+                android:background="@drawable/rounded_shimmer_20dp" />
+        </GridLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

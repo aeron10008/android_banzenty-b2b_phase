@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="50dp"
+    tools:context=".ui.auth.VerificationActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/textViewVerificationMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_30dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:gravity="center"
+        android:text="@string/verification_msg"
+        android:textAlignment="center"
+        android:textColor="@color/dolphin"
+        android:textSize="@dimen/dim_16sp" />
+
+    <com.mukesh.OtpView
+        android:id="@+id/otpView"
+        style="@style/OtpWidget.OtpView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dim_50dp"
+        android:focusable="true"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:itemBackground="@drawable/custom_filed_otp"
+        android:lineHeight="33.5dp"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:OtpItemCount="4"
+        app:OtpItemSpacing="27dp"
+        app:OtpState_filled="true"
+        app:OtpViewType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewVerificationMsg" />
+
+    <TextView
+        android:id="@+id/textViewCheckSendingCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_30dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="@string/check_sending_otp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/silver"
+        android:textSize="@dimen/dim_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpView" />
+
+    <TextView
+        android:id="@+id/textViewResendingOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_5dp"
+        android:clickable="false"
+        android:enabled="false"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:paddingVertical="@dimen/dim_10dp"
+        android:text="@string/resending_otp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/silver_chalice"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:indeterminateTint="@color/flamingo"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dim_20dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="@dimen/dim_20dp"
+        android:background="@drawable/custom_button_french_gray_r14"
+        android:clickable="false"
+        android:enabled="false"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="@string/verify"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dim_16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dim_215dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="@dimen/dim_12dp"
+    app:cardCornerRadius="@dimen/dim_20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageViewServicePic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/car_wash_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius_top_left="20dp"
+            app:riv_corner_radius_top_right="20dp" />
+
+        <TextView
+            android:id="@+id/textViewServiceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="@string/car_wash"
+            android:textColor="@color/tundora"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@id/buttonRedeemService"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewServicePic" />
+
+        <Button
+            android:id="@+id/buttonRedeemService"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_26dp"
+            android:background="@color/red_orange"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/redeem"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

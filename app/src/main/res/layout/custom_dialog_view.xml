@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_dialog_background"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/verification_complete_ic"/>
+
+        <TextView
+            android:id="@+id/textViewDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="14dp"
+            android:text="@string/verification_complete"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            android:lineHeight="19dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textViewDialogContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="6dp"
+            android:text="@string/verification_success_message"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textFontWeight="400"
+            android:textSize="16sp"
+            android:lineHeight="19.5dp"
+            android:textColor="@color/martinique"/>
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="100dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/custom_button_red_orange_r10"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:textFontWeight="600"
+            android:textSize="14sp"
+            android:lineHeight="17dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

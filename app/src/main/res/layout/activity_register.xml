@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".ui.auth.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dim_20dp"
+        android:paddingBottom="@dimen/dim_30dp">
+
+        <TextView
+            android:id="@+id/textViewRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:text="@string/sign_up"
+            android:textAlignment="center"
+            android:textColor="@color/mine_shaft"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewRegisterMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:text="@string/registration_msg"
+            android:textAlignment="center"
+            android:textColor="@color/mine_shaft"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/textViewRegister" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="start|center"
+            android:lineHeight="17sp"
+            android:text="@string/full_name"
+            android:textAlignment="viewStart"
+            android:textColor="@color/comet"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewRegisterMsg" />
+
+        <EditText
+            android:id="@+id/editTextFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_iron_r14_rectangle"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="start|center"
+            android:hint="@string/full_name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="14dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/tundora"
+            android:textColorHint="@color/dark_silver"
+            android:textSize="@dimen/dim_16sp"
+            app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="start|center"
+            android:lineHeight="16.5dp"
+            android:text="@string/email"
+            android:textAlignment="viewStart"
+            android:textColor="@color/comet"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextFullName" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_iron_r14_rectangle"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="start|center"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:lineHeight="19dp"
+            android:maxLines="1"
+            android:padding="14dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/tundora"
+            android:textColorHint="@color/dark_silver"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
+
+        <TextView
+            android:id="@+id/textViewPhoneNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="start|center"
+            android:lineHeight="16.5dp"
+            android:text="@string/phone_number"
+            android:textAlignment="viewStart"
+            android:textColor="@color/comet"
+            android:textSize="14sp"
+            app:layout_constraintHorizontal_weight="500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutPhoneNum"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_iron_r14_rectangle"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPhoneNum">
+
+            <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                android:id="@+id/registerCountryCodePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="14dp"
+                android:layout_marginStart="10dp"
+                app:ccp_arrowSize="25sp"
+                app:ccp_countryPreference="EG, SA"
+                app:ccp_defaultCode="02"
+                app:ccp_defaultNameCode="EG"
+                app:ccp_dialogTextColor="@color/comet"
+                app:ccp_enableHint="false"
+                app:ccp_hideNameCode="true"
+                app:ccp_keyboardAutoPopOnSearch="true"
+                app:ccp_textColor="@color/comet"
+                app:ccp_textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextPhoneNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="11dp"
+                android:layout_toEndOf="@id/registerCountryCodePicker"
+                android:background="@color/transparent"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="start|center"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:letterSpacing="0.08"
+                android:lineHeight="19dp"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/tundora"
+                android:textColorHint="@color/dark_silver"
+                android:textFontWeight="600"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textViewCarPlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="start|center"
+            android:lineHeight="17dp"
+            android:text="@string/car_plate"
+            android:textAlignment="viewStart"
+            android:textColor="@color/comet"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayoutPhoneNum" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCarPlate"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewCarPlate">
+
+            <EditText
+                android:id="@+id/editTextCarNumbers"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_iron_r10_rectangle"
+                android:digits="٠١٢٣٤٥٦٧٨٩0123456789"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="start|center"
+                android:hint="@string/numbers"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingHorizontal="15dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/tundora"
+                android:textColorHint="@color/dark_silver"
+                android:textSize="@dimen/dim_14sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="center"
+                    android:text="@string/alphabets"
+                    android:textAlignment="center"
+                    android:textColor="@color/comet"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="ltr"
+                    android:layout_marginStart="@dimen/dim_5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/et_alp_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/dim_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_iron_r8_rectangle"
+                        android:digits="غظضذخثتشرقصجفعسنملةىكيطئءؤحزوهدبا"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:hint="ت"
+                        android:maxLength="1"
+                        android:minWidth="@dimen/dim_24dp"
+                        android:minHeight="@dimen/dim_30dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/tundora"
+                        android:textColorHint="@color/shimmer_grey"
+                        android:textSize="@dimen/dim_14sp" />
+
+                    <EditText
+                        android:id="@+id/et_alp_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/dim_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_iron_r8_rectangle"
+                        android:digits="غظضذخثتشرقصجفعسنملةىكيطئءؤحزوهدبا"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:hint="ب"
+                        android:maxLength="1"
+                        android:minWidth="@dimen/dim_24dp"
+                        android:minHeight="@dimen/dim_30dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/tundora"
+                        android:textColorHint="@color/shimmer_grey"
+                        android:textSize="@dimen/dim_14sp" />
+
+                    <EditText
+                        android:id="@+id/et_alp_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_iron_r8_rectangle"
+                        android:digits="غظضذخثتشرقصجفعسنملةىكيطئءؤحزوهدبا"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:hint="ا"
+                        android:maxLength="1"
+                        android:minWidth="@dimen/dim_24dp"
+                        android:minHeight="@dimen/dim_30dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/tundora"
+                        android:textColorHint="@color/shimmer_grey"
+                        android:textSize="@dimen/dim_14sp" />
+                </LinearLayout>
+
+                <!-- <com.mukesh.OtpView
+                     android:id="@+id/otpCarAlphabets"
+                     style="@style/OtpWidget.OtpView"
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:fontFamily="@font/sf_pro_display_regular"
+                     android:hint="ابت"
+                     android:inputType="textCapCharacters"
+                     android:itemBackground="@drawable/custom_iron_r8_rectangle"
+                     android:textColor="@color/tundora"
+                     android:textSize="@dimen/dim_14sp"
+                     app:OtpItemCount="3"
+                     app:OtpRtlTextDirection="true"
+                     app:OtpItemHeight="32dp"
+                     app:OtpItemSpacing="7dp"
+                     app:OtpItemWidth="22dp"
+                     app:OtpViewType="none"
+                     />-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="start|center"
+            android:lineHeight="17.5dp"
+            android:text="@string/password"
+            android:textAlignment="viewStart"
+            android:textColor="@color/comet"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutCarPlate" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/relativeLayoutPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start|center"
+            android:textAlignment="viewStart"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/textViewPassword"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/dolphin">
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/custom_iron_r14_rectangle"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="start|center"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:paddingHorizontal="10dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/dolphin"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="start|center"
+            android:lineHeight="17.5dp"
+            android:text="@string/confirm_password"
+            android:textAlignment="viewStart"
+            android:textColor="@color/comet"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayoutPassword" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/relativeLayoutConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+
+            android:layout_marginTop="5dp"
+            android:gravity="start|center_vertical"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/textViewConfirmPassword"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/dolphin">
+
+            <EditText
+                android:id="@+id/editTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/custom_iron_r14_rectangle"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="start|center"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:paddingHorizontal="10dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/dolphin"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTermsAndConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayoutConfirmPassword">
+
+            <RadioButton
+                android:id="@+id/radioButtonTermsAndConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/red_orange" />
+
+            <TextView
+                android:id="@+id/textViewAgreeToTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="start|center"
+                android:lineHeight="17dp"
+                android:text="@string/agree_to_terms"
+                android:textAlignment="viewStart"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="35dp"
+            android:background="@drawable/custom_button_french_gray_r14"
+            android:enabled="false"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:lineHeight="19dp"
+            android:text="@string/register"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutTermsAndConditions" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutTermsAndConditions" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,18 @@
+stages:
+  - beta
+variables: #Set up environment values
+  LC_ALL: "en_US.UTF-8"
+  LANG: "en_US.UTF-8"
+submit-beta-version:
+  stage: beta
+  #  before_script:
+  #    - apt-get -qq update
+  #    - apt-get install -qqy --no-install-recommends build-essential ruby-full
+  #    - gem install bundler fastlane
+  #    - echo $APKSIGN_KEYSTORE_BASE64 | base64 -d > release.jks
+  #    - export APKSIGN_KEYSTORE=`pwd`/release.jks
+  #    - echo $APP_PLAY_SERVICE_JSON > ~/google_play_api_key.json
+  script:
+    - exec fastlane beta
+  #  when: on_success
+  when: manual

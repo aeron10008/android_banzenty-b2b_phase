@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.station.StationDetailsActivity">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageViewStationPic"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_logo_splash"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius_bottom_left="20dp"
+        app:riv_corner_radius_bottom_right="20dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_toolbar_background"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:padding="@dimen/dim_10dp"
+            android:src="@drawable/back_ic"
+            android:layout_gravity="start|center"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:lineHeight="19.5dp"
+            android:text="@string/station"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/dim_20dp"
+        android:paddingVertical="@dimen/dim_12dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewStationPic">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stationDetailsInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="@dimen/dim_12dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@id/buttonStationDirection"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textViewStationName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:lineHeight="21dp"
+                        android:gravity="start|center"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="7dp"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:gravity="start|center"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/mine_shaft"
+                        android:textFontWeight="400"
+                        android:textSize="12sp"
+                        app:drawableStartCompat="@drawable/location_ic" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonStationDirection"
+                    android:layout_width="104dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_get_direction_background"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/directions"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/distanceAndOpeningLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/stationDetailsInfoLayout">
+
+                <FrameLayout
+                    android:id="@+id/fl_distance"
+                    android:layout_width="96dp"
+                    android:layout_height="68dp"
+                    android:background="@drawable/rounded_cosmos_5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="@string/distance"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/mine_shaft"
+                            android:textFontWeight="500"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textViewStationDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:text="3.1 KM"
+                            android:textColor="@color/mine_shaft"
+                            android:textFontWeight="800"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="96dp"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="@dimen/dim_24dp"
+                    android:layout_marginEnd="@dimen/dim_10dp"
+                    android:background="@drawable/rounded_cosmos_5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/fl_distance"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="@string/opening"
+                            android:textColor="@color/mine_shaft"
+                            android:textFontWeight="500"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_opening"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:text="24 Hours"
+                            android:textColor="@color/mine_shaft"
+                            android:textFontWeight="800"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_partner"
+                    android:layout_width="@dimen/dim_50dp"
+                    android:layout_height="@dimen/dim_50dp"
+                    android:layout_marginEnd="@dimen/dim_30dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_available_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_20dp"
+                android:gravity="start|center"
+                android:textAlignment="viewStart"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/available_services"
+                android:textColor="@color/martinique"
+                android:textSize="@dimen/dim_14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAvailableServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="34dp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/available_services_item" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

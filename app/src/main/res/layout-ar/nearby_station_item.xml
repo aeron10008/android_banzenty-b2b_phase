@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dim_200dp"
+    android:layout_height="@dimen/dim_300dp"
+    android:layout_marginHorizontal="@dimen/dim_15dp"
+    android:layout_marginBottom="@dimen/dim_15dp"
+    android:background="@color/transparent"
+    android:elevation="@dimen/dim_5dp"
+    app:cardCornerRadius="@dimen/dim_30dp"
+    app:cardElevation="@dimen/dim_5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageViewStationPic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_130dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_logo_splash"
+            app:riv_corner_radius_top_left="@dimen/dim_30dp"
+            app:riv_corner_radius_top_right="@dimen/dim_30dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_10dp">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="start|center"
+                android:lines="2"
+                android:paddingHorizontal="@dimen/dim_10dp"
+                android:text="Total Energies"
+                android:textAlignment="viewStart"
+                android:textColor="@color/mine_shaft"
+                android:textSize="@dimen/dim_16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/iv_partner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_partner"
+                android:layout_width="@dimen/dim_30dp"
+                android:layout_height="@dimen/dim_30dp"
+                android:layout_marginEnd="@dimen/dim_5dp"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher_round"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_5dp"
+            android:drawablePadding="@dimen/dim_5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="start|center"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/dim_10dp"
+            android:text="el Hegaz sq."
+            android:textAlignment="viewStart"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/dim_12sp"
+            app:drawableStartCompat="@drawable/location_ic" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/dim_10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/dim_60dp"
+                android:layout_height="@dimen/dim_40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_cosmos_5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="center"
+                    android:text="@string/distance"
+                    android:textAlignment="center"
+                    android:textColor="@color/mine_shaft"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textViewDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:gravity="center"
+                    android:lineHeight="12dp"
+                    android:text="3.1 KM"
+                    android:textAlignment="center"
+                    android:textColor="@color/mine_shaft"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dim_60dp"
+                android:layout_height="@dimen/dim_40dp"
+                android:layout_marginStart="@dimen/dim_20dp"
+                android:background="@drawable/rounded_cosmos_5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="center"
+                    android:text="@string/opening"
+                    android:textAlignment="center"
+                    android:textColor="@color/mine_shaft"
+                    android:textSize="@dimen/dim_12sp" />
+
+                <TextView
+                    android:id="@+id/tv_opening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:gravity="center"
+                    android:text="24 Hours"
+                    android:textAlignment="center"
+                    android:textColor="@color/mine_shaft"
+                    android:textSize="@dimen/dim_12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_direction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/dim_15dp"
+            android:background="@drawable/custom_ar_get_direction_background"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:gravity="center"
+            android:lineHeight="14dp"
+            android:paddingHorizontal="28.5dp"
+            android:paddingVertical="8.5dp"
+            android:text="@string/get_direction"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="12sp"
+            tools:targetApi="p" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

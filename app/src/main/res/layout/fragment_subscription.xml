@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wild_sand"
+    android:fillViewport="true"
+    tools:context=".ui.main.SubscriptionFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dim_20dp"
+            android:paddingTop="@dimen/dim_20dp"
+            android:paddingBottom="@dimen/dim_80dp">
+
+            <include
+                android:id="@+id/error_layout"
+                layout="@layout/error_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <include layout="@layout/place_holder_my_subscription" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sub_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_sub_pic"
+                    android:layout_width="@dimen/dim_80dp"
+                    android:layout_height="@dimen/dim_80dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_sub_logo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dim_8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_subscription_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:gravity="start|center"
+                        android:text="Bronze Subscription"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dim_18sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_cash"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="@dimen/dim_10dp"
+                        android:max="350"
+                        android:progressDrawable="@drawable/custom_fuel_progress_bar" />
+
+                    <TextView
+                        android:id="@+id/tv_remaining_cash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5dp"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:gravity="center|start"
+                        android:letterSpacing="0.03"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/dusty_gray"
+                        android:textSize="@dimen/dim_18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_about_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_20dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:gravity="start|center"
+                android:text="@string/about_subscription"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim_16sp" />
+            <TextView
+                android:id="@+id/tv_total_litres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:drawablePadding="@dimen/dim_3dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="start|center"
+                android:text="@string/estimated_capacity_s_litres"
+                android:textAlignment="viewStart"
+                android:textColor="@color/filter_silver"
+                android:textSize="@dimen/dim_14sp"
+                app:drawableStartCompat="@drawable/right_ic" />
+
+            <TextView
+                android:id="@+id/tv_fuel_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:drawablePadding="@dimen/dim_3dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="start|center"
+                android:text="@string/fuel_type_s"
+                android:textAlignment="viewStart"
+                android:textColor="@color/filter_silver"
+                android:textSize="@dimen/dim_14sp"
+                app:drawableStartCompat="@drawable/right_ic" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:drawablePadding="@dimen/dim_3dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="start|center"
+                android:text="@string/total_price_s_egp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/filter_silver"
+                android:textSize="@dimen/dim_14sp"
+                app:drawableStartCompat="@drawable/right_ic" />
+
+            <TextView
+                android:id="@+id/tv_beneifts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_20dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:gravity="start|center"
+                android:text="@string/benefits"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim_16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_subscription_features"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_20dp"
+                android:layout_marginTop="@dimen/dim_5dp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/buttonSubscribe"
+                app:layout_constraintTop_toBottomOf="@id/tv_subscriptionName"
+                tools:itemCount="4"
+                tools:listitem="@layout/subscription_feature_item" />
+
+            <LinearLayout
+                android:id="@+id/ll_actions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_12dp"
+                android:layout_marginTop="@dimen/dim_40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dim_5dp"
+                    android:layout_marginEnd="@dimen/dim_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_red_orange_stroke_r14"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/dim_5dp"
+                    android:paddingVertical="@dimen/dim_6dp"
+                    android:text="@string/cancel_subscription"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red_orange"
+                    android:textSize="@dimen/dim_14sp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:indeterminateTint="@color/flamingo"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_renew"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dim_5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_red_orange_r14"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/dim_5dp"
+                    android:paddingVertical="@dimen/dim_6dp"
+                    android:text="@string/renew_subscription"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dim_14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</ScrollView>
